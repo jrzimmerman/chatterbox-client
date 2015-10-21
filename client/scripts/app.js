@@ -30,9 +30,10 @@ $(function() {
 
     // when room is switched, change app.room
     saveRoom: function(changed) {
-      var selectedRoom = app.$roomSelect.prop('selectedRoom');
+      // var selectedRoom = app.$roomSelect.prop('selectedRoom');
+      var selectedRoom = app.$roomSelect.val();
 
-      if(selectedRoom === 0) {
+      if(selectedRoom === 'newroom') {
         // create a new room
         var roomname = prompt('Enter room name');
         if( roomname ) {
